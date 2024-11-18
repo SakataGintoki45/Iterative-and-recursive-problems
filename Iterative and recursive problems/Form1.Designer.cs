@@ -33,21 +33,26 @@
             btnIterative = new Button();
             lblResult = new Label();
             label1 = new Label();
+            label2 = new Label();
+            btnIterativeFactorial = new Button();
+            btnRecursiveFactorial = new Button();
+            txtNumberFactorial = new TextBox();
+            lblResultFactorial = new Label();
             SuspendLayout();
             // 
             // txtNumber
             // 
             txtNumber.Font = new Font("Segoe UI", 15F);
-            txtNumber.Location = new Point(289, 86);
+            txtNumber.Location = new Point(64, 87);
             txtNumber.Name = "txtNumber";
             txtNumber.Size = new Size(190, 34);
             txtNumber.TabIndex = 0;
             // 
             // btnRecursive
             // 
-            btnRecursive.Location = new Point(169, 151);
+            btnRecursive.Location = new Point(21, 151);
             btnRecursive.Name = "btnRecursive";
-            btnRecursive.Size = new Size(176, 41);
+            btnRecursive.Size = new Size(94, 41);
             btnRecursive.TabIndex = 1;
             btnRecursive.Text = "Recursive";
             btnRecursive.UseVisualStyleBackColor = true;
@@ -55,9 +60,9 @@
             // 
             // btnIterative
             // 
-            btnIterative.Location = new Point(428, 151);
+            btnIterative.Location = new Point(175, 151);
             btnIterative.Name = "btnIterative";
-            btnIterative.Size = new Size(176, 41);
+            btnIterative.Size = new Size(88, 41);
             btnIterative.TabIndex = 2;
             btnIterative.Text = "Iterative";
             btnIterative.UseVisualStyleBackColor = true;
@@ -66,7 +71,7 @@
             // lblResult
             // 
             lblResult.AutoSize = true;
-            lblResult.Location = new Point(247, 262);
+            lblResult.Location = new Point(12, 290);
             lblResult.Name = "lblResult";
             lblResult.Size = new Size(0, 15);
             lblResult.TabIndex = 3;
@@ -75,17 +80,68 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15F);
-            label1.Location = new Point(337, 35);
+            label1.Location = new Point(123, 38);
             label1.Name = "label1";
             label1.Size = new Size(83, 28);
             label1.TabIndex = 4;
             label1.Text = "Fibnacci";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 15F);
+            label2.Location = new Point(513, 38);
+            label2.Name = "label2";
+            label2.Size = new Size(86, 28);
+            label2.TabIndex = 8;
+            label2.Text = "Factorial";
+            // 
+            // btnIterativeFactorial
+            // 
+            btnIterativeFactorial.Location = new Point(565, 151);
+            btnIterativeFactorial.Name = "btnIterativeFactorial";
+            btnIterativeFactorial.Size = new Size(88, 41);
+            btnIterativeFactorial.TabIndex = 7;
+            btnIterativeFactorial.Text = "Iterative";
+            btnIterativeFactorial.UseVisualStyleBackColor = true;
+            btnIterativeFactorial.Click += btnIterativeFactorial_Click;
+            // 
+            // btnRecursiveFactorial
+            // 
+            btnRecursiveFactorial.Location = new Point(411, 151);
+            btnRecursiveFactorial.Name = "btnRecursiveFactorial";
+            btnRecursiveFactorial.Size = new Size(94, 41);
+            btnRecursiveFactorial.TabIndex = 6;
+            btnRecursiveFactorial.Text = "Recursive";
+            btnRecursiveFactorial.UseVisualStyleBackColor = true;
+            btnRecursiveFactorial.Click += btnRecursiveFactorial_Click;
+            // 
+            // txtNumberFactorial
+            // 
+            txtNumberFactorial.Font = new Font("Segoe UI", 15F);
+            txtNumberFactorial.Location = new Point(454, 87);
+            txtNumberFactorial.Name = "txtNumberFactorial";
+            txtNumberFactorial.Size = new Size(190, 34);
+            txtNumberFactorial.TabIndex = 5;
+            // 
+            // lblResultFactorial
+            // 
+            lblResultFactorial.AutoSize = true;
+            lblResultFactorial.Location = new Point(427, 267);
+            lblResultFactorial.Name = "lblResultFactorial";
+            lblResultFactorial.Size = new Size(0, 15);
+            lblResultFactorial.TabIndex = 9;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblResultFactorial);
+            Controls.Add(label2);
+            Controls.Add(btnIterativeFactorial);
+            Controls.Add(btnRecursiveFactorial);
+            Controls.Add(txtNumberFactorial);
             Controls.Add(label1);
             Controls.Add(lblResult);
             Controls.Add(btnIterative);
@@ -104,5 +160,10 @@
         private Button btnIterative;
         private Label lblResult;
         private Label label1;
+        private Label label2;
+        private Button btnIterativeFactorial;
+        private Button btnRecursiveFactorial;
+        private TextBox txtNumberFactorial;
+        private Label lblResultFactorial;
     }
 }

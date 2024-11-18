@@ -54,5 +54,48 @@ namespace Iterative_and_recursive_problems
                 MessageBox.Show("Please enter a valid number.");
             }
         }
+
+        private int FactorialRecursive(int n)
+        {
+            if (n == 0) 
+                return 1;
+            return n * FactorialRecursive(n - 1); 
+        }
+
+        private int FactorialIterative(int n)
+        {
+            int result = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                result *= i;
+            }
+            return result;
+        }
+
+        private void btnRecursiveFactorial_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtNumberFactorial.Text, out int n) && n >= 0) 
+            {
+                int result = FactorialRecursive(n);
+                lblResultFactorial.Text = $"Result (Recursive): {result}";
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid number.");
+            }
+        }
+
+        private void btnIterativeFactorial_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtNumberFactorial.Text, out int n) && n >= 0) 
+            {
+                int result = FactorialIterative(n);
+                lblResultFactorial.Text = $"Result (Iterative): {result}";
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid number.");
+            }
+        }
     }
 }
